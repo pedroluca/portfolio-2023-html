@@ -10,25 +10,39 @@
   </head>
   <body>
     <nav>
-      <div class="main-logo">
+      <div class="fixSize main-logo">
         <a href="">Pedro Luca</a></h1>
       </div>
-      <div>
+      <div class="menu menu-mobile" id="menu-mobile">
+        <button class="button-mobile" id="button-mobile"><span class="hamburguer"></span></button>
         <ul>
-          <li><a href="pages/sobre.html">Sobre</a><span></span></li>
-          <li><a href="pages/projetos.html">Projetos</a><span></span></li>
+          <li><a href="pages/about.html">Sobre</a><span></span></li>
+          <li><a href="pages/projects.html">Projetos</a><span></span></li>
           <li><a href="pages/setup.html">Setup</a><span></span></li>
+          <li class="contatos"><a href="pages/contact.html">Contate-me</a></li>
         </ul>
       </div>
-      <div class="invisible">
-        <h1>Pedro Luca</h1>
+      <div class="fixSize floatRight contact-button">
+        <a href="pages/contact.html">Contate-me</a>
       </div>
     </nav>
-    <main>
-
+    <main class="home">
+      <div>
+        <h1>Pedro Luca Prates</h1>
+        <h3 id="title">Desenvolvedor Front-End | Técnico em Informática</h3>
+        <h3>Estudante de Análise e Desenvolvimento de Sistemas</h3>
+      </div>
     </main>
     <footer>
-
+      <ul class="footer-links">
+        <li class="links instagram"><a href="https://www.instagram.com/pedroluca.dev" target="_blank" class="instagram"><span>instagram</span><img src="images/instagram.svg" class="link-images"></a></li>
+        <li class="links github"><a href="https://www.github.com/pedroluca" target="_blank" class="github"><span>github</span><img src="images/github.svg" class="link-images"></a></li>
+        <li class="links linkedin"><a href="https://www.linkedin.com/in/pedro-luca-prates" target="_blank" class="linkedin"><span>linkedin</span><img src="images/linkedin.svg" class="link-images"></a></li>
+        <li class="links twitter"><a href="https://www.twitter.com/pedrolucaofc" target="_blank" class="twitter"><span>twitter</span><img src="images/twitter.svg" class="link-images"></a></li>
+        <li class="links youtube"><a href="https://www.youtube.com/channel/UC7qDaMEUS4MjhQ7UVxQQVMQ" target="_blank" class="youtube"><span>youtube</span><img src="images/youtube.svg" class="link-images"></a></li>
+        <li class="links twitch"><a href="https://www.twitch.tv/pedrolucaofc" target="_blank" class="twitch"><span>twitch</span><img src="images/twitch.svg" class="link-images"></a></li>
+      </ul>      
     </footer>
+    <script src="js/toggleMenu.js"></script>
   </body>
 </html>
