@@ -390,6 +390,171 @@ main.contact section a img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  main {
+    margin: 0;
+    height: auto;
+    width: 100vw;
+    min-height: calc(100vh - 15rem);
+    padding: 0 5vw;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .5rem;
+    height: 8rem;
+  }
+  
+  nav ul li {
+    padding: .5rem 1rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: .2rem;
+  }
+
+  main.contact section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    font-size: 1.8rem;
+  }
+
+  main.contact section a {
+    height: 18rem;
+    width: 18rem;
+    background: var(--black-third-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: ease-in-out .3s;
+  }
+
+  main.contact {
+    margin-bottom: 0;
+  }
+  
+  main.about section.main-info {
+    flex-direction: row;
+    gap: 2%;
+  }
+  
+  section.main-info .subsection {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  main.contact section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 1.3rem;
+  }
+
+  main.contact section a {
+    height: 12rem;
+    width: 12rem;
+    background: var(--black-third-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: ease-in-out .3s;
+  }
+}
+
+@media screen and (max-width: 170px) {
+  main.setup section ul {
+    list-style-type: square;
+    margin: 0 0 1rem 1rem;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+  }
+  
+  nav .menu-mobile ul {
+    padding-top: 3rem;
+  }
+  
+  nav .menu-mobile.active ul {
+    width: 100%;
+  }
+  
+  nav .main-logo a {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    padding: 0 .2rem;
+    height: 4rem;
+  }
+  
+  nav ul li {
+    font-size: 1.3rem;
+    gap: .2rem;
+  }
+
+  main.home h1 {
+    font-size: 1.8rem;
+  }
+
+  main.contact section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
+
+  main.contact section a {
+    height: 12rem;
+    width: 12rem;
+    background: var(--black-third-color);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: ease-in-out .3s;
+  }
+  
+  footer {
+    height: 100vh;
+  }
+  
+  footer ul {
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  
+  footer ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    transition: ease-in-out .2s;
+  }
+
+  footer ul li a span {
+    display: none;
+  }
+  
+  footer img.link-images {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
 @media screen and (min-width: 1081px) {
   :root {
     --font-size: 1.6rem;
