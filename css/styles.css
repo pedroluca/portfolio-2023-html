@@ -12,6 +12,10 @@
   --blue-color: #1E90FF;
 }
 
+a.pointer-cursor {
+  cursor: pointer !important;
+}
+
 main.home h1 {
   font-size: 4rem;
 
