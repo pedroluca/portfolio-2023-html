@@ -33,7 +33,7 @@
           <img src="../images/profile.jpg" class="main-photo">
         </div>
         <div class="subsection">
-          <p>Meu nome é Pedro Luca, tenho 19 anos e sou Técnico em Informática.</p>
+          <p>Meu nome é Pedro Luca, tenho <span id="age"></span> anos e sou Técnico em Informática.</p>
           <br>
           <p>Em 2021, conclui o curso técnico em Informática para Internet no IF Baiano - <i>campus</i> Guanambi, onde atualmente estou cursando a faculdade de Análise e Desenvolvimento de Sistemas.</p>
           <br>
@@ -84,5 +84,12 @@
       </ul>      
     </footer>
     <script src="../js/toggleMenu.js"></script>
+    <script>
+      var birthdate = new Date("2003-01-28");
+      var today = new Date();
+      var difference = today.getTime() - birthdate.getTime();
+      var age = Math.floor(difference / (1000 * 60 * 60 * 24 * 365));
+      document.getElementById("age").innerHTML = age;
+    </script>
   </body>
 </html>
