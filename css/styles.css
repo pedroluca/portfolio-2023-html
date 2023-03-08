@@ -126,7 +126,7 @@ main.projects section div {
   
 main.setup,
 main.contact {
-  width: 100%;
+  width: 100vw !important;
 }
 
 main.setup section {
