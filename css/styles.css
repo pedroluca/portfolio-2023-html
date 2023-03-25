@@ -259,7 +259,7 @@ main.contact section a img {
     display: flex;
     color: var(--blue-color);
     font-weight: bold;
-    flex-wrap: nowrap;
+    white-space: nowrap;
   }
   
   nav .button-mobile {
