@@ -16,6 +16,10 @@ a.pointer-cursor {
   cursor: pointer !important;
 }
 
+main, nav, footer {
+  overflow-y: hidden;
+}
+
 main.home h1 {
   font-size: 4rem;
 
@@ -126,7 +130,7 @@ main.projects section div {
   
 main.setup,
 main.contact {
-  width: 100vw !important;
+  width: 100% !important;
 }
 
 main.setup section {
@@ -686,7 +690,7 @@ main.contact section a img {
   main {
     margin: 0;
     height: auto;
-    width: 100vw;
+    width: 100%;
     min-height: calc(100vh - 13rem);
     padding: 0 25vw;
   }
