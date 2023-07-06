@@ -16,15 +16,20 @@
       <div class="menu menu-mobile" id="menu-mobile">
         <button class="button-mobile" id="button-mobile"><span class="hamburguer"></span></button>
         <ul>
-          <li><a href="about.html">Sobre</a><span></span></li>
+          <li><a href="about.html">Sobre</a></li>
           <li class="active"><a href="projects.html">Projetos</a><span></span></li>
-          <li><a href="setup.html">Setup</a><span></span></li>
-          <li class="contatos"><a href="contact.html">Contate-me</a></li>
+          <li><a href="setup.html">Setup</a></li>
+          <li><a href="contact.html">Contate-me</a></li>
+          <li class="switch-mobile-theme">
+            <p>Alterar tema</p>
+            <div class="switch-container">
+              <input type ="checkbox" id="theme-button" class="switch-checkbox">
+              <label for="theme-button" class="switch-label"></label>
+            </div>
+          </li>
         </ul>
       </div>
-      <div class="fixSize floatRight contact-button">
-        <a href="contact.html">Contate-me</a>
-      </div>
+      <div class="fixSize floatRight switch-theme"></div>
     </nav>
     <main class="home projects">
       <h1>Projetos</h1>
@@ -57,5 +62,6 @@
       </ul>    
     </footer>
     <script src="../js/toggleMenu.js"></script>
+    <script src="../js/changeTheme.js"></script>
   </body>
 </html>
