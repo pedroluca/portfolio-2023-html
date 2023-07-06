@@ -3,13 +3,23 @@
 :root {
   font-size: 62.5%;
 
-  --black-color: #08070B;
-  --black-second-color: #040d0f;
-  --black-third-color: #182022;
+  --bg-color: #f5f5f5;
+  --2bg-color: #e5e5e5;
+  --font-light-color: #1d1d1d;
+  --font-strong-color: #E3D8F1;
+  --font-hover-color: #08070B;
+  --blue-color: #1E90FF;
+  --scrollbar-color: var(--blue-color);
+}
+
+.dark {
+  --bg-color: #040d0f;
+  --2bg-color: #182022;
   --font-light-color: #8F9BA8;
   --font-strong-color: #E3D8F1;
   --font-hover-color: #fff;
   --blue-color: #1E90FF;
+  --scrollbar-color: var(--font-light-color);
 }
 
 a.pointer-cursor {
@@ -169,11 +179,15 @@ main.contact section {
 main.contact section a {
   height: 15rem;
   width: 15rem;
-  background: var(--black-third-color);
+  background: var(--2bg-color);
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
   transition: ease-in-out .3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main.contact section a:hover {
@@ -182,6 +196,53 @@ main.contact section a:hover {
 
 main.contact section a img {
   height: 50%;
+}
+
+.switch-container {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch-checkbox {
+  display: none;
+}
+
+.switch-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1390ff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.switch-label:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: gold;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+body.dark .switch-checkbox:checked + .switch-label:before {
+  background: #fff;
+}
+
+.switch-checkbox:checked + .switch-label {
+  background: darkslategray;
+}
+
+.switch-checkbox:checked + .switch-label:before {
+  transform: translateX(24px);
 }
 
 @media screen and (max-width: 1080px) {
@@ -193,7 +254,7 @@ main.contact section a img {
     width: auto !important;
   }
   
-  .contact-button {
+  .switch-theme {
     display: none;
   }
   
@@ -208,7 +269,7 @@ main.contact section a img {
     font-family: 'Tomorrow', sans-serif;
   
     color: var(--font-light-color);
-    background: var(--black-second-color);
+    background: var(--bg-color);
   }
   
   a {
@@ -248,6 +309,13 @@ main.contact section a img {
     color: var(--font-hover-color);
     visibility: visible;
   }
+
+  .switch-mobile-theme {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+  }
   
   nav .main-logo a {
     background: rgb(30,144,255);
@@ -257,13 +325,6 @@ main.contact section a img {
     color: transparent;
     font-size: 2.5rem;
     font-weight: bold;
-  }
-  
-  nav .menu-mobile ul .contatos a {
-    display: flex;
-    color: var(--blue-color);
-    font-weight: bold;
-    white-space: nowrap;
   }
   
   nav .button-mobile {
@@ -305,7 +366,7 @@ main.contact section a img {
     top: 0;
     right: 0;
     padding-top: 8rem;
-    background: var(--black-third-color);
+    background: var(--2bg-color);
     color: var(--font-light-color);
     z-index: 1000;
     transition: .9s;
@@ -440,7 +501,7 @@ main.contact section a img {
   main.contact section a {
     height: 18rem;
     width: 18rem;
-    background: var(--black-third-color);
+    background: var(--2bg-color);
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
@@ -475,7 +536,7 @@ main.contact section a img {
   main.contact section a {
     height: 12rem;
     width: 12rem;
-    background: var(--black-third-color);
+    background: var(--2bg-color);
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
@@ -530,7 +591,7 @@ main.contact section a img {
   main.contact section a {
     height: 12rem;
     width: 12rem;
-    background: var(--black-third-color);
+    background: var(--2bg-color);
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
@@ -573,12 +634,12 @@ main.contact section a img {
   }
   
   ::-webkit-scrollbar-track {
-    background: var(--black-second-color);
+    background: var(--bg-color);
     border-radius: 30px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: var(--blue-color);
+    background: var(--scrollbar-color);
     border-radius: 30px;
   }
   
@@ -593,7 +654,7 @@ main.contact section a img {
     font-family: 'Tomorrow', sans-serif;
   
     color: var(--font-light-color);
-    background: var(--black-second-color);
+    background: var(--bg-color);
   }
   
   a {
@@ -601,8 +662,7 @@ main.contact section a img {
     text-decoration: none;
   }
 
-  nav .button-mobile,
-  li.contatos {
+  nav .button-mobile {
     display: none;
   }
   
@@ -611,12 +671,25 @@ main.contact section a img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     padding: 0 2rem;
   }
 
   nav .menu {
     display: flex;
     flex-direction: row;
+  }
+
+  .switch-mobile-theme {
+    position: absolute;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .switch-mobile-theme p {
+    display: none;
   }
   
   nav .menu ul {
@@ -672,19 +745,6 @@ main.contact section a img {
   
   nav .fixSize.floatRight {
     justify-content: flex-end;
-  }
-  
-  nav .contact-button a {
-    color: var(--font-hover-color);
-    background: var(--blue-color);
-    padding: .5rem;
-    border-radius: 10px;
-    transition: ease-in-out .2s;
-  }
-  
-  nav .contact-button a:hover {
-    background: var(--font-hover-color);
-    color: var(--blue-color);
   }
   
   main {
